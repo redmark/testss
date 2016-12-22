@@ -1,0 +1,24 @@
+
+
+group 'com.redmark'
+version '1.0-SNAPSHOT'
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: "war"
+
+    apply from: "../../qu-server/gradle/compile.gradle"
+    apply from: "../../qu-server/gradle/repositories.gradle"
+    apply from: "../../qu-server/gradle/dependencies.gradle"
+
+    dependencies {
+        compile libs.springmvc
+        compile libs.springsecurity
+        compile libs.logback
+        compileOnly libs.servlet
+        compile libs.jstl
+        testCompile libs.testng
+
+    }
+}
+
