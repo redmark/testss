@@ -19,6 +19,8 @@ subprojects {
         compile libs.jstl
         testCompile libs.testng
 
+        compile "com.fasterxml.jackson.core:jackson-databind:2.8.2"
+
     }
 }
 
